@@ -17,6 +17,11 @@ The best server provisioning, orchestration tool I have experience with is Terra
 
 #### Create a backup script for PostgreSQL using pg_dump that compresses and encrypts the backup file (important: the unencrypted file should never be stored in the file system during the process). The backup script needs to be executed every night. Also, a sys admin should be able to run the script manually. Create a documentation and a procedure for the script, so that a new DevOps employee can understand the backup regime from the documentation and can check that the backup ran properly, or execute the backup script manually.
 
+Please see the bash script in the "task-2" directory.
+The script takes 1 argument, the name of the database, and can be run manually by sys admin. Required to have RSA key pairs to run this script which has to be made once, stored in a secure location and thus should not be part of the script which might be run daily. Right now the script assumes the keys are in the root directory, which shouldn't be there, but I decided to set this for the sake of convinience.
+Script to generete public key e.g.: 'ssh-keygen -t rsa' to start up the interactive prompt.
+For running this automatized in certain time-interval, I would use cron/ crontab to schedule this script.
+
 ### 3 - Running GitLab with Docker Compose
 
 #### Create a Dockerfile and a Docker Compose file that starts up a GitLab server so that:
@@ -25,9 +30,7 @@ The best server provisioning, orchestration tool I have experience with is Terra
 2. it uses the /var/data/gitlab directory of the host OS to store all data
 3. all custom config files are part of the image
 
-Please see files attached in irems-3 directory.
-
-### 4 - Reverse Proxy
+Please see files in the "task-3" directory.
 
 #### What a reverse proxy is
 
@@ -46,3 +49,5 @@ A reverse proxy - literally means a figure to represent somebody else - is a ser
 While Traefik is free and open-source NGINX is Although both are quite a similar load balancing reverse proxy servers offering multitudes of features, Traefik is focused on microservices, cloud-native applications, k8s clusters. Setting up a docker-compose file is easier in the case of the NGINX, however adding new services and managing is easier in Traefik. NGINX does not support monitoring for its free tier model.
 
 ### 5 - Shell Scripting
+
+Please see the bash script in the "task-5" directory.
