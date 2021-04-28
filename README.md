@@ -55,8 +55,8 @@ While Traefik is free and open-source NGINX is Although both are quite a similar
 1. takes two parameters: path to directory and size limit
 2. lists directory and all sub-directories where size exceeds size limit.
 
+Please see the bash script in the "task-5" directory.
+
 #### Explain why you used that shell.
 
 I choose bash, mainly because apart of python and javascript, bash is the only scripting languge I have experience with. Bash is supported in all GNU Linux distros by default, and support a wide range of features.
-
-Please see the bash script in the "task-5" directory.
