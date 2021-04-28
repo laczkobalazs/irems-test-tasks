@@ -25,6 +25,8 @@ The best server provisioning, orchestration tool I have experience with is Terra
 2. it uses the /var/data/gitlab directory of the host OS to store all data
 3. all custom config files are part of the image
 
+Please see files attached in irems-3 directory.
+
 ### 4 - Reverse Proxy
 
 #### What a reverse proxy is
