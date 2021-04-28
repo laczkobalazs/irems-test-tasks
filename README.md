@@ -56,6 +56,7 @@ While Traefik is free and open-source NGINX is Although both are quite a similar
 2. lists directory and all sub-directories where size exceeds size limit.
 
 Please see the bash script in the "task-5" directory.
+Personal note: First I wanted to use 'du' which stands for 'disk usage' but as you stated to list the directories and subdirectories only, I switch for find, because I saw no option to hide the size parameter when printing to stdout.
 
 #### Explain why you used that shell.
 
